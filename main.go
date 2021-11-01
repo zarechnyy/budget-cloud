@@ -27,5 +27,5 @@ func main() {
 
 	fmt.Println("Server is listening...")
 	loggedRouter := handlers.LoggingHandler(os.Stdout, router)
-	log.Fatal(http.ListenAndServe(":8181", loggedRouter))
+	log.Fatal(http.ListenAndServe("0.0.0.0:8181", loggedRouter))
 }
