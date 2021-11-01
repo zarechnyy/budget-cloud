@@ -19,11 +19,11 @@ func main() {
 	budgetController := controllers.BudgetController{DataStore: &dataStore}
 	router := mux.NewRouter()
 
-	router.Handle("/create", budgetController.CreateBudget()).Methods("POST")
-	router.Handle("/update", budgetController.UpdateBudget()).Methods("POST")
-	router.Handle("/fetchAll", budgetController.FetchAll()).Methods("GET")
-	router.Handle("/fetch/{id}", budgetController.FetchBudget()).Methods("GET")
-	router.Handle("/delete/{id}", budgetController.DeleteBudget()).Methods("DELETE")
+	router.Handle("/budget/new", budgetController.CreateBudget()).Methods("POST")
+	router.Handle("/budgets", budgetController.UpdateBudget()).Methods("POST")
+	router.Handle("/budgets", budgetController.FetchAll()).Methods("GET")
+	router.Handle("/budget/{id}", budgetController.FetchBudget()).Methods("GET")
+	router.Handle("/budget/{id}", budgetController.DeleteBudget()).Methods("DELETE")
 
 	fmt.Println("Server is listening...")
 	loggedRouter := handlers.LoggingHandler(os.Stdout, router)
