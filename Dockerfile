@@ -5,8 +5,8 @@ WORKDIR /app
 COPY ./ /app
 
 ENV DB_HOST=34.89.238.138
-ENV DB_USER=postgres
-ENV DB_PW=postgres
+ENV DB_USER=myuser
+ENV DB_PW=22papich87
 ENV DB_NAME=postgres
 ENV DB_PORT=5432
 
