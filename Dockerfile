@@ -12,4 +12,6 @@ ENV DB_PORT=5432
 
 RUN go mod download
 
+EXPOSE 8181
+
 ENTRYPOINT go run main.go
